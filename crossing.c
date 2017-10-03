@@ -1,5 +1,6 @@
 // Résultat de l'opérateur + entre les différents types, il en va de même pour les autres
 
+// Ceci permet de définir une fonction qui donne un text spécifique en fonction du type d'une variable
 #define typename(x) _Generic((x), _Bool: "_Bool", unsigned char: "unsigned char", \
 char: "char", signed char: "signed char", short int: "short int", \
 unsigned short int: "unsigned short int", int: "int", unsigned int: "unsigned int", \
@@ -134,7 +135,8 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(q), typename(i), typename(q + i));
     printf("%s + %s is %s\n", typename(q), typename(o), typename(q + o));
     printf("%s + %s is %s\n", typename(q), typename(p), typename(q + p));
-
+    
+    return 0;
 }
 
 /*
