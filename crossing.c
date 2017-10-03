@@ -1,6 +1,12 @@
 // Résultat de l'opérateur + entre les différents types, il en va de même pour les autres
 
-#define typename(x) _Generic((x), _Bool: "_Bool", unsigned char: "unsigned char", char: "char", signed char: "signed char", short int: "short int", unsigned short int: "unsigned short int", int: "int", unsigned int: "unsigned int", long int: "long int", unsigned long int: "unsigned long int", long long int: "long long int", unsigned long long int: "unsigned long long int", float: "float", double: "double", long double: "long double", char *: "pointer to char", void *: "pointer to void", int *: "pointer to int", default: "other")
+#define typename(x) _Generic((x), _Bool: "_Bool", unsigned char: "unsigned char", \
+char: "char", signed char: "signed char", short int: "short int", \
+unsigned short int: "unsigned short int", int: "int", unsigned int: "unsigned int", \
+long int: "long int", unsigned long int: "unsigned long int", long long int: "long long int", \
+unsigned long long int: "unsigned long long int", float: "float", double: "double", \
+long double: "long double", char *: "pointer to char", void *: "pointer to void", \
+int *: "pointer to int", default: "other")
 
 #include <stdio.h>
 
@@ -130,3 +136,118 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(q), typename(p), typename(q + p));
 
 }
+
+/*
+RESULTATS (effectué avec addition uniquement)
+
+signed char + unsigned char is int
+signed char + short int is int
+signed char + int is int
+signed char + long int is long int
+signed char + unsigned short int is int
+signed char + unsigned int is unsigned int
+signed char + unsigned long int is unsigned long int
+signed char + float is float
+signed char + double is double
+signed char + long double is long double
+unsigned char + signed char is int
+unsigned char + short int is int
+unsigned char + int is int
+unsigned char + long int is long int
+unsigned char + unsigned short int is int
+unsigned char + unsigned int is unsigned int
+unsigned char + unsigned long int is unsigned long int
+unsigned char + float is float
+unsigned char + double is double
+unsigned char + long double is long double
+short int + signed char is int
+short int + unsigned char is int
+short int + int is int
+short int + long int is long int
+short int + unsigned short int is int
+short int + unsigned int is unsigned int
+short int + unsigned long int is unsigned long int
+short int + float is float
+short int + double is double
+short int + long double is long double
+int + signed char is int
+int + unsigned char is int
+int + short int is int
+int + long int is long int
+int + unsigned short int is int
+int + unsigned int is unsigned int
+int + unsigned long int is unsigned long int
+int + float is float
+int + double is double
+int + long double is long double
+long int + signed char is long int
+long int + unsigned char is long int
+long int + short int is long int
+long int + int is long int
+long int + unsigned short int is long int
+long int + unsigned int is long int
+long int + unsigned long int is unsigned long int
+long int + float is float
+long int + double is double
+long int + long double is long double
+unsigned short int + signed char is int
+unsigned short int + unsigned char is int
+unsigned short int + short int is int
+unsigned short int + int is int
+unsigned short int + long int is long int
+unsigned short int + unsigned int is unsigned int
+unsigned short int + unsigned long int is unsigned long int
+unsigned short int + float is float
+unsigned short int + double is double
+unsigned short int + long double is long double
+unsigned int + signed char is unsigned int
+unsigned int + unsigned char is unsigned int
+unsigned int + short int is unsigned int
+unsigned int + int is unsigned int
+unsigned int + long int is long int
+unsigned int + unsigned short int is unsigned int
+unsigned int + unsigned long int is unsigned long int
+unsigned int + float is float
+unsigned int + double is double
+unsigned int + long double is long double
+unsigned long int + signed char is unsigned long int
+unsigned long int + unsigned char is unsigned long int
+unsigned long int + short int is unsigned long int
+unsigned long int + int is unsigned long int
+unsigned long int + long int is unsigned long int
+unsigned long int + unsigned short int is unsigned long int
+unsigned long int + unsigned int is unsigned long int
+unsigned long int + float is float
+unsigned long int + double is double
+unsigned long int + long double is long double
+float + signed char is float
+float + unsigned char is float
+float + short int is float
+float + int is float
+float + long int is float
+float + unsigned short int is float
+float + unsigned int is float
+float + unsigned long int is float
+float + double is double
+float + long double is long double
+double + signed char is double
+double + unsigned char is double
+double + short int is double
+double + int is double
+double + long int is double
+double + unsigned short int is double
+double + unsigned int is double
+double + unsigned long int is double
+double + float is double
+double + long double is long double
+long double + signed char is long double
+long double + unsigned char is long double
+long double + short int is long double
+long double + int is long double
+long double + long int is long double
+long double + unsigned short int is long double
+long double + unsigned int is long double
+long double + unsigned long int is long double
+long double + float is long double
+long double + double is long double
+*/
