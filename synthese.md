@@ -1,9 +1,23 @@
 # PROGRAMMATION - SYNTHESE
-*Réalisé à partir du cours d'openclassroom : [Apprenez à programmer en C!](https://openclassrooms.com/courses/apprenez-a-programmer-en-c) et du cours de B. Donnet.*
 
-## Auteur
+## Vocabulaire
 
-Créée par Maxime AMODEI le 02/10/2017, n'hésitez pas à suggérer des modifications !
+* Compilation : Le *compilateur* transforme un fichier `.c` en un fichier binaire par le biais de la compilation. C'est donc l'action de transormer un *code source* lisible et compréhensible humainnement en un fichier composé de 1 et 0 destiné à l'ordinateur.
+* Compilateur : Autre programe chargé de la *compilation* du *code source*.
+* Incrémentation : L'incrémentation d'une *variable* est l'augmentation de sa valeur d'une unité spécifiée ou implicite, ex: `myVar += d;` ou `myVar++;`
+* Décrémentation : La décrémentation d'une *variable* est la diminution de sa valeur d'une unité spécifiée ou implicite, ex: `myVar -= d;` ou `myVar--;`
+* Variable : Référence dans le code source à une valeur qu'on enregistre en mémoire afin de l'utiliser dans des opérations.
+* Entree / Sortie standard : Respectivement le clavier et l'écran de la console, ceux-ci peuvent être modifié mais c'est laissé aux plus expérimentés.
+* Type : Valeur fixe associée à une variable permettant de les classifier en plusieurs groupes, chaque type remplis un ensembles de fonctions pour lequel il est le mieux adapté.
+* Affectation / Assignement : Fait d'associer une valeur (numérique, textuelle, binaire, etc) à une *variable*.
+* Pointer sur : Etat pour une variable de type pointeur de posséder en contenu l'adresse mémoire d'une autre variable.
+* RAM (Random Access Memory) : Là où toutes les variables déclarées sont enregistrées.
+* bit : Unité de stockage en mémoire.
+* byte : Unité de stockage en mémoire telle que 1 byte = 8 bits.
+* mot : Association de 4 bytes en mémoire, la plupart des *variables* sont enregistrées sur un mot.
+* Instruction : Ordre d'effectuer une action précise pour la machine
+* Bibliothèque : Souvent appelée, à tort, librairie c'est un fichier tierce obtenu qui contient des instructions qui ne sont pas nécessairement connue, bien qu'on puisse les utiliser dans une certaine mesure.
+* Indentation : Pratique utilisée par les développeurs / codeurs qui consiste à faire précéder chaque ligne d'un nombre spécifique d'espace/tabulation afin de donner une meilleure visibilité au code.
 
 ## Types Primitifs.
 
@@ -251,10 +265,10 @@ printf("%d\n", *pointeur_sur_s); //5
 Globalement les fonctions `scanf`et `printf` sont les plus utilisées. Elles nécessitent d'importer la bibliothèque stdio comme suit: `#import <stdio.h>`.
 
 ### Printf
-La fonction `printf` s'utilise avec 1 premier paramètre étant le texte à afficher, entre guillemets (avec ou sans identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage.
+La fonction `printf` s'utilise avec 1 premier paramètre étant le texte à afficher, entre guillemets (avec ou sans identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage. Elle affiche le texte formaté dans la sortie standard.
 
 ### Scanf
-La fonction `scanf` s'utilise avec 1 premier paramètre étant le texte qui doit être saisis, entre guillemets (de préférence avec identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage.
+La fonction `scanf` s'utilise avec 1 premier paramètre étant le texte qui doit être saisis, entre guillemets (de préférence avec identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage. Elle récupère du texte formaté depuis l'entree standar.
 NB: on peut demander un format très précis tel que `"%d-%d-%d"` afin de demander une date par exemple mais si ne serait-ce que les tirets ne sont pas respectés, aucune valeur ne sera réccupérée.
 NB: bien penser à référencer ses variables lorsqu'on les passe dans scanf pour que cette dernière puisse y placer les bonnes valeurs.
 
