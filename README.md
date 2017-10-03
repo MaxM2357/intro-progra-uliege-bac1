@@ -4,3 +4,11 @@ Voici les résumés et autres infos sur la matière du cours donné par B. Donne
 
 * Le contenu principal du cours est dans le fichier summary.md
 * Les regles de type de résultats des opérations est dans le fichier crossing.c, le résultat est à la fin du fichier, en commentaire
+
+Le code pouvant générer le code nécessaire au fichier crossing.c est le suivant (python):
+``` py
+l=list("azertyuiopq")
+for i in l:
+  for j in l:
+    print("printf(\"%s + %s is %s\\n\", typename("+i+"), typename("+j+"), typename("+i+" + "+j+"));")
+```
