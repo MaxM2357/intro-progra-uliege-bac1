@@ -25,6 +25,7 @@ int main(int argc, char* argv[]) {
     double p;
     long double q;
 
+    printf("%s + %s is %s\n", typename(a), typename(a), typename(a + a));
     printf("%s + %s is %s\n", typename(a), typename(z), typename(a + z));
     printf("%s + %s is %s\n", typename(a), typename(e), typename(a + e));
     printf("%s + %s is %s\n", typename(a), typename(r), typename(a + r));
@@ -36,6 +37,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(a), typename(p), typename(a + p));
     printf("%s + %s is %s\n", typename(a), typename(q), typename(a + q));
     printf("%s + %s is %s\n", typename(z), typename(a), typename(z + a));
+    printf("%s + %s is %s\n", typename(z), typename(z), typename(z + z));
     printf("%s + %s is %s\n", typename(z), typename(e), typename(z + e));
     printf("%s + %s is %s\n", typename(z), typename(r), typename(z + r));
     printf("%s + %s is %s\n", typename(z), typename(t), typename(z + t));
@@ -47,6 +49,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(z), typename(q), typename(z + q));
     printf("%s + %s is %s\n", typename(e), typename(a), typename(e + a));
     printf("%s + %s is %s\n", typename(e), typename(z), typename(e + z));
+    printf("%s + %s is %s\n", typename(e), typename(e), typename(e + e));
     printf("%s + %s is %s\n", typename(e), typename(r), typename(e + r));
     printf("%s + %s is %s\n", typename(e), typename(t), typename(e + t));
     printf("%s + %s is %s\n", typename(e), typename(y), typename(e + y));
@@ -58,6 +61,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(r), typename(a), typename(r + a));
     printf("%s + %s is %s\n", typename(r), typename(z), typename(r + z));
     printf("%s + %s is %s\n", typename(r), typename(e), typename(r + e));
+    printf("%s + %s is %s\n", typename(r), typename(r), typename(r + r));
     printf("%s + %s is %s\n", typename(r), typename(t), typename(r + t));
     printf("%s + %s is %s\n", typename(r), typename(y), typename(r + y));
     printf("%s + %s is %s\n", typename(r), typename(u), typename(r + u));
@@ -69,6 +73,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(t), typename(z), typename(t + z));
     printf("%s + %s is %s\n", typename(t), typename(e), typename(t + e));
     printf("%s + %s is %s\n", typename(t), typename(r), typename(t + r));
+    printf("%s + %s is %s\n", typename(t), typename(t), typename(t + t));
     printf("%s + %s is %s\n", typename(t), typename(y), typename(t + y));
     printf("%s + %s is %s\n", typename(t), typename(u), typename(t + u));
     printf("%s + %s is %s\n", typename(t), typename(i), typename(t + i));
@@ -80,6 +85,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(y), typename(e), typename(y + e));
     printf("%s + %s is %s\n", typename(y), typename(r), typename(y + r));
     printf("%s + %s is %s\n", typename(y), typename(t), typename(y + t));
+    printf("%s + %s is %s\n", typename(y), typename(y), typename(y + y));
     printf("%s + %s is %s\n", typename(y), typename(u), typename(y + u));
     printf("%s + %s is %s\n", typename(y), typename(i), typename(y + i));
     printf("%s + %s is %s\n", typename(y), typename(o), typename(y + o));
@@ -91,6 +97,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(u), typename(r), typename(u + r));
     printf("%s + %s is %s\n", typename(u), typename(t), typename(u + t));
     printf("%s + %s is %s\n", typename(u), typename(y), typename(u + y));
+    printf("%s + %s is %s\n", typename(u), typename(u), typename(u + u));
     printf("%s + %s is %s\n", typename(u), typename(i), typename(u + i));
     printf("%s + %s is %s\n", typename(u), typename(o), typename(u + o));
     printf("%s + %s is %s\n", typename(u), typename(p), typename(u + p));
@@ -102,6 +109,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(i), typename(t), typename(i + t));
     printf("%s + %s is %s\n", typename(i), typename(y), typename(i + y));
     printf("%s + %s is %s\n", typename(i), typename(u), typename(i + u));
+    printf("%s + %s is %s\n", typename(i), typename(i), typename(i + i));
     printf("%s + %s is %s\n", typename(i), typename(o), typename(i + o));
     printf("%s + %s is %s\n", typename(i), typename(p), typename(i + p));
     printf("%s + %s is %s\n", typename(i), typename(q), typename(i + q));
@@ -113,6 +121,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(o), typename(y), typename(o + y));
     printf("%s + %s is %s\n", typename(o), typename(u), typename(o + u));
     printf("%s + %s is %s\n", typename(o), typename(i), typename(o + i));
+    printf("%s + %s is %s\n", typename(o), typename(o), typename(o + o));
     printf("%s + %s is %s\n", typename(o), typename(p), typename(o + p));
     printf("%s + %s is %s\n", typename(o), typename(q), typename(o + q));
     printf("%s + %s is %s\n", typename(p), typename(a), typename(p + a));
@@ -124,6 +133,7 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(p), typename(u), typename(p + u));
     printf("%s + %s is %s\n", typename(p), typename(i), typename(p + i));
     printf("%s + %s is %s\n", typename(p), typename(o), typename(p + o));
+    printf("%s + %s is %s\n", typename(p), typename(p), typename(p + p));
     printf("%s + %s is %s\n", typename(p), typename(q), typename(p + q));
     printf("%s + %s is %s\n", typename(q), typename(a), typename(q + a));
     printf("%s + %s is %s\n", typename(q), typename(z), typename(q + z));
@@ -135,13 +145,15 @@ int main(int argc, char* argv[]) {
     printf("%s + %s is %s\n", typename(q), typename(i), typename(q + i));
     printf("%s + %s is %s\n", typename(q), typename(o), typename(q + o));
     printf("%s + %s is %s\n", typename(q), typename(p), typename(q + p));
-    
+    printf("%s + %s is %s\n", typename(q), typename(q), typename(q + q));
+
     return 0;
 }
 
 /*
 RESULTATS (effectué avec addition uniquement)
 
+signed char + signed char is int
 signed char + unsigned char is int
 signed char + short int is int
 signed char + int is int
@@ -153,6 +165,7 @@ signed char + float is float
 signed char + double is double
 signed char + long double is long double
 unsigned char + signed char is int
+unsigned char + unsigned char is int
 unsigned char + short int is int
 unsigned char + int is int
 unsigned char + long int is long int
@@ -164,6 +177,7 @@ unsigned char + double is double
 unsigned char + long double is long double
 short int + signed char is int
 short int + unsigned char is int
+short int + short int is int
 short int + int is int
 short int + long int is long int
 short int + unsigned short int is int
@@ -175,6 +189,7 @@ short int + long double is long double
 int + signed char is int
 int + unsigned char is int
 int + short int is int
+int + int is int
 int + long int is long int
 int + unsigned short int is int
 int + unsigned int is unsigned int
@@ -186,6 +201,7 @@ long int + signed char is long int
 long int + unsigned char is long int
 long int + short int is long int
 long int + int is long int
+long int + long int is long int
 long int + unsigned short int is long int
 long int + unsigned int is long int
 long int + unsigned long int is unsigned long int
@@ -197,6 +213,7 @@ unsigned short int + unsigned char is int
 unsigned short int + short int is int
 unsigned short int + int is int
 unsigned short int + long int is long int
+unsigned short int + unsigned short int is int
 unsigned short int + unsigned int is unsigned int
 unsigned short int + unsigned long int is unsigned long int
 unsigned short int + float is float
@@ -208,6 +225,7 @@ unsigned int + short int is unsigned int
 unsigned int + int is unsigned int
 unsigned int + long int is long int
 unsigned int + unsigned short int is unsigned int
+unsigned int + unsigned int is unsigned int
 unsigned int + unsigned long int is unsigned long int
 unsigned int + float is float
 unsigned int + double is double
@@ -219,6 +237,7 @@ unsigned long int + int is unsigned long int
 unsigned long int + long int is unsigned long int
 unsigned long int + unsigned short int is unsigned long int
 unsigned long int + unsigned int is unsigned long int
+unsigned long int + unsigned long int is unsigned long int
 unsigned long int + float is float
 unsigned long int + double is double
 unsigned long int + long double is long double
@@ -230,6 +249,7 @@ float + long int is float
 float + unsigned short int is float
 float + unsigned int is float
 float + unsigned long int is float
+float + float is float
 float + double is double
 float + long double is long double
 double + signed char is double
@@ -241,6 +261,7 @@ double + unsigned short int is double
 double + unsigned int is double
 double + unsigned long int is double
 double + float is double
+double + double is double
 double + long double is long double
 long double + signed char is long double
 long double + unsigned char is long double
@@ -252,4 +273,5 @@ long double + unsigned int is long double
 long double + unsigned long int is long double
 long double + float is long double
 long double + double is long double
+long double + long double is long double
 */
