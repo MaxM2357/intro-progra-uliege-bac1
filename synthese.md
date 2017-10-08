@@ -84,7 +84,7 @@ int test1 = numerateur*quotient + reste == numerateur; // vaut 1
 
 Note: lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
 
-**RAPPEL: aucun opérateur standard n'existe pour la multiplication**
+**RAPPEL: aucun opérateur standard n'existe pour la multiplication**  
 Pour ce faire il convient de faire une boucle (cf Flux de contrôles/Boucles)
 
 ```c
