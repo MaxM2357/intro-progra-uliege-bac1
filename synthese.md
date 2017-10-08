@@ -299,7 +299,10 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 | %lu | unsigned long int |
 | %hu | unsigned short int |
 
-NB: on peut également utilisé la synthaxe `"%Nd"` (où N est un entier à placer dans le code) pour afficher au maximum N chiffre d'un entier.
+NB: 
+* Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
+<!--
+* On peut également utilisé la synthaxe `"%Nd"` (où N est un entier à placer dans le code) pour afficher au maximum N chiffre d'un entier.
 Ex:
 
 ``` c
@@ -309,3 +312,4 @@ scanf("%d", &entree);
 printf("Vous avez entré %d ! \n", entree);
 printf("Ses deux premiers chiffres sont : %2d ! \n", entree);
 ```
+-->
