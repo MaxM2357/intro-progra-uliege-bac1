@@ -287,17 +287,29 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 
 ### Formatage
 
-| Identifiant | Type |
-|:--|:--|
-| %d | int |
-| %f | float |
-| %lf | double |
-| %c | char |
-| %ld | long int |
-| %hd | short int |
-| %u | unsigned int |
-| %lu | unsigned long int |
-| %hu | unsigned short int |
+| Spécificateur de format |  Description | Types de données supportés |  
+| :-- | :-- | :-- | 
+| `%c` |  Charactère |  `char`, `unsigned  char` |  
+| `%d` |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` |  
+| `%e` ou `%E` |  Notation scientifique des nombres à virgule |  `float`, `double ` |  
+| `%f` |  Nombre à virgule |  `float` |  
+| `%g` or `%G` |  Pareil que %e ou %E |  `float`, `double ` |  
+| `%hi` |  Entier signé (petit) |  `short` |  
+| `%hu` |  Entier non signé (petit) |  `unsigned short` |  
+| `%i` |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` |  
+| `%l` or `%ld` or `%li` |  Entier signé |  `long` |  
+| `%lf` |  Nombre à virgule |  `double` |  
+| `%Lf` |  Nombre à virgule |  `long double` |  
+| `%lu` |  Entier non signé |  `unsigned int`, `unsigned  long` |  
+| `%lli`, `%lld` |  Entier signé |  `long long` |  
+| `%llu` |  Entier non signé |  `unsigned long long` |  
+| `%o` |  Représentation octale d'un entier |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` |  
+| `%p` |  Adresse d'un pointeur vers void void * |  `void *` |  
+| `%s` |  Caractères (texte entre "") |  `char *` |  
+| `%u` |  Entier non signé |  `unsigned int`, `unsigned  long` |  
+| `%x` or `%X` |  Représentation octale d'un entier non signé |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` |  
+| `%n` |  N'affiche rien  | 
+| `%%` |  Affiche %  | 
 
 NB: 
 * Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
