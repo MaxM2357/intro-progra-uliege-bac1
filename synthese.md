@@ -308,8 +308,8 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 | `%s` |  Caractères (texte entre "") |  `char *` | Non |
 | `%u` |  Entier non signé |  `unsigned int`, `unsigned  long` | Oui |
 | `%x` or `%X` |  Représentation octale d'un entier non signé |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` | Non |
-| `%n` |  N'affiche rien  | Non |
-| `%%` |  Affiche %  | Non |
+| `%n` |  N'affiche rien | N/A | Non |
+| `%%` |  Affiche % | N/A | Non |
 
 NB: 
 * Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
