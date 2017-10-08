@@ -84,18 +84,20 @@ int test1 = numerateur*quotient + reste == numerateur; // vaut 1
 
 Note: lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
 
-**RAPPEL: aucun opérateur standard n'existe pour la multiplication**  
+**RAPPEL: aucun opérateur standard n'existe pour les puissances entières**  
 Pour ce faire il convient de faire une boucle (cf Flux de contrôles/Boucles)
 
 ```c
 // calculer la n-ième puissance de x
-int n; // doit être entier, sinon le résulat peut être approché par une exponentielle (par Taylor ou la bibliotheque math.h)
+int n; // doit être entier
 float x; // peut importe de type du moment qu'il représente un nombre
 for (int i = 1; i < n; i++) { // ici, i commence à 1 et non 0 car x est la puissance 1 de x
 	x *= x;
 }
 // x vaut maintenant la n-ième puissance de la valeur de départ
 ```
+
+NB: pour les puissances rationnelles (0.5, 3.1415, ... = n/d) il convient de soit approcher la racine d - ème de la n -ième puissance du nombre par des algorythmes assez complexes soit de passer par une exponentielle. La fonction exp est disponible dans la bibliothèque math.h, sinon on peut l'approcher via le développement en série de Taylor / McLaurin (à savoir 1 + x + x^2/2 + x^/6 + ...).
 
 #### Contitions
 
