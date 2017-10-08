@@ -84,6 +84,19 @@ int test1 = numerateur*quotient + reste == numerateur; // vaut 1
 
 Note: lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
 
+**RAPPEL: aucun opérateur standard n'existe pour la multiplication**
+Pour ce faire il convient de faire une boucle (cf Flux de contrôles/Boucles)
+
+```c
+// calculer la n-ième puissance de x
+int n; // doit être entier, sinon le résulat peut être approché par une exponentielle (par Taylor ou la bibliotheque math.h)
+float x; // peut importe de type du moment qu'il représente un nombre
+for (int i = 1; i < n; i++) { // ici, i commence à 1 et non 0 car x est la puissance 1 de x
+	x *= x;
+}
+// x vaut maintenant la n-ième puissance de la valeur de départ
+```
+
 #### Contitions
 
 Une condition évalue 0 à la valeur FAUX et n'importe quoi d'autre à VRAI
@@ -186,7 +199,7 @@ Les différentes opérations sur un même échelons se lisent de gauche à droit
 
 <sup>2</sup> : Signe moins unitaire, négation et non pas différence
 
-## FLux de contrôles
+## Flux de contrôles
 
 ### Conditions
 
