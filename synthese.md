@@ -291,13 +291,13 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 | :-- | :-- | :-- | --: |
 | `%c` |  Charactère |  `char`, `unsigned  char` | Oui |
 | `%d` |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` |  Oui |
-| `%e` ou `%E` |  Notation scientifique des nombres à virgule |  `float`, `double ` |  Non |
+| `%e`, `%E` |  Notation scientifique des nombres à virgule |  `float`, `double ` |  Non |
 | `%f` |  Nombre à virgule |  `float` | Oui |
-| `%g` or `%G` |  Pareil que %e ou %E |  `float`, `double ` | Non |
+| `%g`, `%G` |  Pareil que %e ou %E |  `float`, `double ` | Non |
 | `%hi` |  Entier signé (petit) |  `short` | Oui |
 | `%hu` |  Entier non signé (petit) |  `unsigned short` | Oui |
 | `%i` |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` | Non |
-| `%l` or `%ld` or `%li` |  Entier signé |  `long` | Oui (uniquement le premier) |
+| `%ld`, `%l`, `%li` |  Entier signé |  `long` | Oui (uniquement le premier) |
 | `%lf` |  Nombre à virgule |  `double` | Oui |
 | `%Lf` |  Nombre à virgule |  `long double` | Non |
 | `%lu` |  Entier non signé |  `unsigned int`, `unsigned  long` | Oui |
@@ -307,21 +307,11 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 | `%p` |  Adresse d'un pointeur vers void void * |  `void *` | Non |
 | `%s` |  Caractères (texte entre "") |  `char *` | Non |
 | `%u` |  Entier non signé |  `unsigned int`, `unsigned  long` | Oui |
-| `%x` or `%X` |  Représentation octale d'un entier non signé |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` | Non |
+| `%x`, `%X` |  Représentation octale d'un entier non signé |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` | Non |
 | `%n` |  N'affiche rien | N/A | Non |
 | `%%` |  Affiche % | N/A | Non |
 
 NB: 
 * Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
-<!--
-* On peut également utilisé la synthaxe `"%Nd"` (où N est un entier à placer dans le code) pour afficher au maximum N chiffre d'un entier.
-Ex:
-
-``` c
-int entree;
-printf("Saisissez un entier: ");
-scanf("%d", &entree);
-printf("Vous avez entré %d ! \n", entree);
-printf("Ses deux premiers chiffres sont : %2d ! \n", entree);
-```
--->
+* Utiliser une synthaxe de type `%Nd` (N à remplacer explicitement) affiche un entier avec au moins N chiffres (en remplaçant par des espaces à l'avant si besoin)
+* Utiliser une synthaxe de type `%.Nd` (N à remplacer explicitement) affiche un flottant avec ses décimales arrondies à la N-ième (si besoin) (fonctionne aussi pour les double et long double)
