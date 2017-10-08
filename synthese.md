@@ -315,5 +315,40 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 
 NB: 
 * Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
-* Utiliser une synthaxe de type `%Nd` (N à remplacer explicitement) affiche un entier avec au moins N chiffres (en remplaçant par des espaces à l'avant si besoin)
-* Utiliser une synthaxe de type `%.Nd` (N à remplacer explicitement) affiche un flottant avec ses décimales arrondies à la N-ième (si besoin) (fonctionne aussi pour les double et long double)
+* Utiliser une syntaxe de type `%Nd` (N à remplacer explicitement) affiche un entier avec au moins N chiffres (en remplaçant par des espaces à l'avant si besoin)
+* Utiliser une syntaxe de type `%.Nd` (N à remplacer explicitement) affiche un flottant avec ses décimales arrondies à la N-ième (si besoin) (fonctionne aussi pour les double et long double)
+
+## Compilation
+
+**Ceci n'est pas inclus dans la matière évaluée, il s'agit uniquement d'une aide pour la compilation des fichiers sources**
+NB: ceci est couvert de façon plus détaillée dans [Le deuxième chapitre du cours sur openclassroom](https://openclassrooms.com/courses/apprenez-a-programmer-en-c/ayez-les-bons-outils)
+
+### Avec IDE
+
+*IDE* : *Integrated Development Environment* Ou Environnement de Développement Inégré est un logiciel permettant de combiner les divers logiciels utilisés pour la réalisation d'un projet, nottement un *editeur*, un *compilateur* et un *débugger*. On écrit le code dans l'éditeur, on le compile par une action simple et le débugger nous aide à tester le projet.
+
+Les plus connus: 
+
+* Multiplatforme : Code::Blocks
+* Windows/Mac OS : Visual Studio
+* Mac OS : XCode
+
+### Sans IDE
+
+On utilise n'impore quel éditeur pour faire son code source, on passe ensuite le code source au compilateur qui renvoie un fichier exécutable qu'on débug avec un débugger.
+
+Editeurs connus:
+
+* vi: disponible depuis un terminal UNIX (Linux/Mac OS) (coloration syntaxique en option).
+* vim: version améliorée de vi, toujours dans le terminal.
+* notepad++ (Windows): éditeur de texte très répendu
+* Sublime Text (Multi - Payant avec version d'essai infinie)
+* Atom (Mutli - Gratuit et Open Source)
+
+Les trois plus grands OS ont chacun un éditeur de texte qui leur est propre et qui peut faire l'affaire
+
+Compilateur:
+
+* GNU Compiler Collection (gcc) : Installé sur la pluspart des sysmtème UNIX, complile le C, C++, obj-c, Fortran, Ada, et Go. Syntaxe: `gcc [-o outPutFile] inputfile.c`
+
+Il en existe d'autre mais l'utilisation d'un IDE est souvent plus simple.
