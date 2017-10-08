@@ -275,7 +275,7 @@ printf("%d\n", *pointeur_sur_s); //5
 
 ## Entrée et sortie (I/O)
 
-Globalement les fonctions `scanf`et `printf` sont les plus utilisées. Elles nécessitent d'importer la bibliothèque stdio comme suit: `#import <stdio.h>`.
+Globalement les fonctions `scanf`et `printf` sont les plus utilisées. Elles nécessitent d'importer la bibliothèque stdio comme suit: `#include <stdio.h>`.
 
 ### Printf
 La fonction `printf` s'utilise avec 1 premier paramètre étant le texte à afficher, entre guillemets (avec ou sans identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage. Elle affiche le texte formaté dans la sortie standard.
@@ -283,7 +283,9 @@ La fonction `printf` s'utilise avec 1 premier paramètre étant le texte à affi
 ### Scanf
 La fonction `scanf` s'utilise avec 1 premier paramètre étant le texte qui doit être saisis, entre guillemets (de préférence avec identifiants de formatage) et ensuite autant de paramètre qu'il y a d'identifiants de formatage. Elle récupère du texte formaté depuis l'entree standar.
 NB: on peut demander un format très précis tel que `"%d-%d-%d"` afin de demander une date par exemple mais si ne serait-ce que les tirets ne sont pas respectés, aucune valeur ne sera réccupérée.
-NB: bien penser à référencer ses variables lorsqu'on les passe dans scanf pour que cette dernière puisse y placer les bonnes valeurs.
+NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf pour que cette dernière puisse y placer les bonnes valeurs.
+
+### Formatage
 
 | Identifiant | Type |
 |:--|:--|
@@ -297,7 +299,7 @@ NB: bien penser à référencer ses variables lorsqu'on les passe dans scanf pou
 | %lu | unsigned long int |
 | %hu | unsigned short int |
 
-NB: on peut également utilisé la synthaxe `"%Nd"` (où N est un entier à remplacer dans le code) pour afficher au maximum deux chiffre d'un entier.
+NB: on peut également utilisé la synthaxe `"%Nd"` (où N est un entier à placer dans le code) pour afficher au maximum N chiffre d'un entier.
 Ex:
 
 ``` c
