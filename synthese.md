@@ -21,23 +21,23 @@
 
 ## Types Primitifs.
 
-Format: `[[un]signed] [long|short] type nom [= valeur];`
+Format: `signe type nom [= valeur];`
 Les crochets représentent des options facultatives et la bare verticale un choix entre certaines valeurs.
 Toutes les options ne sont pas nécessairement disponibles.
 
-| Type | Taille (Bytes) | Minimum | Maximum | Commentaires |
-|:--|:--|:--|:--|--:|
-| signed char | 1 | -2^7 | 2^7-1 | peut être initialisé avec un caractère ASCII entre ' ' |
-| unsigned char | 1 | 0 | 2^8-1 | |
-| signed short int | 2 | -2^15 | 2^15-1 | signé par défaut, plus petit qu'un int |
-| unsigned short int | 2 | 0 | 2^16-1 | |
-| signed int | 4 | -2^31 | 2^31-1 | signé par défaut, plus utilisé pour la gestion d'entier |
-| unsigned int | 4 | 0 | 2^32-1 | entier positif |
-| signed long int | 8 | -2^63 | 2^63-1 | signé par défaut, utilisé pour les nombres "très grands" |
-| unsigned long int | 8 | 0 | 2^64-1 | |
-| float | 4 |  |  | toujours signé, précision à 7 décimales |
-| double | 8 |  |  | toujours signé, précision à 15 décimales |
-| long double | 16 |   |   | même précision qu'un double mais la partie entière peut être plus grande |
+| Type | Taille (Bytes) | Signe | Minimum | Maximum | Commentaires |
+|:--|:--|:--|:--|:--|--:|
+| char | 1 | signed **default** | -2^7 | 2^7-1 | peut être initialisé avec un caractère ASCII entre ' ' ou un entier |
+|||unsigned | 0 | 2^8-1 | |
+| short int | 2 | singed **default** | -2^15 | 2^15-1 | la partie `int` dans le nom n'est pas obligatoire, utilisé pour les nombres plus petit |
+||| unsigned | 0 | 2^16-1 | |
+| int | 4 | signed **default** | -2^31 | 2^31-1 | le plus utilisé pour la gestion d'entier |
+||| unsigned | 0 | 2^32-1 | |
+| long int | 8 | signed **default** | -2^63 | 2^63-1 |utilisé pour les nombres plus grands |
+||| unsigned | 0 | 2^64-1 | |
+| float | 4 | signed | | | toujours signé, précision à 7 décimales |
+| double | 8 | signed |  |  | toujours signé, précision à 15 décimales |
+| long double | 16 | signed |  |   | même précision qu'un double mais la partie entière peut être plus grande |
 
 Ex:
 ```c
@@ -56,6 +56,8 @@ var++; //renvoie un erreur
 ```
 
 Chacun de ces types primitifs peut être déclaré sous forme de pointeur (un chapitre y est consacré) comme suit: `int* pointeur_sur_int = &normal_int;`
+
+Chacun de ces types primitifs peut être déclaré sous forme de tableau comme suit: `int tableau_de_int[];`
 
 Si vous déclarer un pointeur constant, seule l'adresse enregistrée dans le pointeur est constante, la valeur à cette adresse peut toujours être modifiée.
 
