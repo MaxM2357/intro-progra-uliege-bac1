@@ -70,8 +70,39 @@ var++; //renvoie un erreur
 * Pour un int, si le prefice long ou short est utilisé, la mention `int` devient facultative, on peut donc écrire `short var;` au lieux de `short int var;`
 * Chacun de ces types primitifs peut être déclaré sous forme de pointeur (un chapitre y est consacré) comme suit: `int* pointeur_sur_int = &normal_int;`
 * Si vous déclarer un pointeur constant, seule l'adresse enregistrée dans le pointeur est constante, la valeur à cette adresse peut toujours être modifiée.
-* Chacun de ces types primitifs peut être déclaré sous forme de tableau comme suit: `int tableau_de_int[];`
+* Chacun de ces types primitifs peut être déclaré sous forme de tableau comme suit: `int tableau_de_int[taille_du_tableau];`
 
+
+### Casting
+
+La *type cast* ou *casting* est le changement du type d'une valeur. Le type d'une variable etant fixé, le casting ne s'opère pas directement sur la variable mais assigne la valeur de la première variable, **transformée dans un autre type** à une autre variable.
+
+
+#### Casting implicite
+
+Le changement du type se fera naturellement si besoin.
+
+* Les types `char` et `short` sont transformé en int à chaque opération, peut importe le résultat
+* Le type avec la plus grande capacité ou précision domine lors d'une opération : `int` => `long` => `float` => `double` => `long double`
+* Lors de l'assignation, le type attendu est respecté
+
+Ex: `int a = 2; float b = 3.4; long double c = 2.71;` `a*b` sera `float` et `a*c` sera un `long double`
+Ex: 
+```c
+long double float_pi = 3.1415926535897931;
+int int_pi = float_pi; // int_pi vaut 3 et est de type entier, comme attendu
+```
+
+#### Casting explicite
+
+* Il suffit de placer entre paranthèses le type dans lequel on souhaite convertir une variable
+
+Ex: 
+```c
+int a = 7, b = 10;
+printf("%d", a / b); // affiche 0
+printf("%f", (float) a / (float) b); // affiche 0.7000000
+```
 
 ### Opérateurs sur les types primitifs
 
@@ -79,21 +110,21 @@ var++; //renvoie un erreur
 #### Arithmétiques
 
 * `+`, `-`, `*`: *implicite*
-* `/`: sur des entiers (int/char) il renvoie le resultat de la division eucledienne, donc **toujours un entier**.
+* `/`: sur des entiers (int/char) il renvoie le resultat de la division eucledienne, donc **toujours un entier si les opérands sont entier**, sur des nombres à virgules le fonctionnement est implicite.
 * `%`: sur des entiers uniquement, il renvoie le reste de la division eucledienne.
 
 On a donc :
-``` c
-int numerateur = 5;
-int diviseur = 5;
+```c
+int numerateur = 10;
+int diviseur = 7;
 int quotient = numerateur / diviseur;
 int reste = numerateur % diviseur;
 
-int test1 = numerateur*quotient == numerateur; // vaut 0
-int test1 = numerateur*quotient + reste == numerateur; // vaut 1
+int test1 = diviseur*quotient == numerateur; // vaut 0 => FAUX
+int test1 = diviseur*quotient + reste == numerateur; // vaut 1 => VRAI
 ```
 
-* Lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
+* Lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII et elle est transformée en int.
 
 **RAPPEL: aucun opérateur standard n'existe pour les puissances entières**  
 Pour ce faire il convient de faire une boucle (cf Flux de contrôles/Boucles)
@@ -284,6 +315,36 @@ printf("%d\n", *pointeur_sur_s); //5
 3. On donne l'adresse de s afin que `scanf` puisse y insérer une valeur qu'on utilisera.
 4. `*` : opérateur de DE-REFERENCEMENT, renvoie la valeur en mémoire à l'adresse du pointeur.
 
+## Tableaux
+
+### Tableaux unidimensionnels
+
+Les tableaux (*arrays* en anglais) représentent une liste d'éléments homogènes (tous du même type), leur capacité est *finie* et **constante**. Tout les éléments sont accessibles par un indice entier positif indépendant des autres, les indices vont de 0 à la capacité du tableau moins 1.   
+On les déclare de cette manière : `type_du_tableau nom_du_tableau[taille_du_tableau];`  
+On peut accéder aux éléments avec l'indice grâce à ce format = `nom_du_tableau[indice]`, on peut y assigner une valeur pour vu que le tableau ne soit pas déclaré constant ou obtenir la valeur qui y était précédemment.
+On peut leur assimiler une valeur par défaut, ex : `int valeurs_booleene[2] = {-1, 1};` où `valeurs_booleene[0]` est 1 et `valeurs_booleene[1]` est -1. Un tableau constant doit donc obligatoirement avoir une valeur par défaut.
+
+Ex d'utilisation : 
+```c
+const unsigned short taille = 4;
+int elements[taille];
+int i;
+
+printf("Remplissage du tableau : ");
+for (i = 0; i < taille; i++) {
+	printf("Entrez le %d-ème elements (entier): ", i);
+	scanf("%d", &elements[i]);
+}
+
+printf("Affichage du tableau : ");
+for (i = 0; i < taille; i++) {
+	printf("%d", elements[i]); // affiche l'element i
+	if (i != taille-1)
+		printf(", "); // pour plus de lisibilité
+	else
+		printf("\n");
+}
+```
 
 ## Entrée et sortie (I/O)
 
