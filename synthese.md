@@ -295,7 +295,7 @@ for (int compteur = 0; cond; compteur++) {
 ```
 
 * Aucunes des parties du for (initialisation / condition / incrementation) n'est obligatoire, il en résulte alors une boucle infinie
-* Les mots-clefs `break` et `continue` n'ont pas été vy en cours mais leur utilisation reste assez intuitive
+* Les mots-clefs `break` et `continue` n'ont pas été vu en cours mais leur utilisation reste assez intuitive
 
 
 ## Pointeurs
