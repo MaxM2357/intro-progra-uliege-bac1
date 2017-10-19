@@ -19,25 +19,36 @@
 * Bibliothèque : Souvent appelée, à tort, librairie c'est un fichier tierce obtenu qui contient des instructions qui ne sont pas nécessairement connue, bien qu'on puisse les utiliser dans une certaine mesure.
 * Indentation : Pratique utilisée par les développeurs / codeurs qui consiste à faire précéder chaque ligne d'un nombre spécifique d'espace/tabulation afin de donner une meilleure visibilité au code.
 
-## Types Primitifs.
+## Types Primitifs
 
 Format: `signe type nom [= valeur];`
 Les crochets représentent des options facultatives et la bare verticale un choix entre certaines valeurs.
 Toutes les options ne sont pas nécessairement disponibles.
 
-| Type | Taille (Bytes) | Signe | Minimum | Maximum | Commentaires |
+### Nombres Entiers
+
+| Type | Taille (Bytes) | Signe | Minimum | Maximum | Commentaires|
 |:--|:--|:--|:--|:--|--:|
-| char | 1 | signed **default** | -2^7 | 2^7-1 | peut être initialisé avec un caractère ASCII entre ' ' ou un entier |
+| char | 1 | signed **par défaut** | -2^7 | 2^7-1 | peut être initialisé avec un caractère ASCII entre ' ' ou un entier |
 |||unsigned | 0 | 2^8-1 | |
-| short int | 2 | singed **default** | -2^15 | 2^15-1 | la partie `int` dans le nom n'est pas obligatoire, utilisé pour les nombres plus petit |
+| short int | 2 | singed **par défaut** | -2^15 | 2^15-1 | la partie `int` dans le nom n'est pas obligatoire, utilisé pour les nombres plus petit |
 ||| unsigned | 0 | 2^16-1 | |
-| int | 4 | signed **default** | -2^31 | 2^31-1 | le plus utilisé pour la gestion d'entier |
+| int | 4 | signed **par défaut** | -2^31 | 2^31-1 | le plus utilisé pour la gestion d'entier |
 ||| unsigned | 0 | 2^32-1 | |
-| long int | 8 | signed **default** | -2^63 | 2^63-1 |utilisé pour les nombres plus grands |
+| long int | 8 | signed **par défaut** | -2^63 | 2^63-1 |utilisé pour les nombres plus grands |
 ||| unsigned | 0 | 2^64-1 | |
-| float | 4 | signed | | | toujours signé, précision à 7 décimales |
-| double | 8 | signed |  |  | toujours signé, précision à 15 décimales |
-| long double | 16 | signed |  |   | même précision qu'un double mais la partie entière peut être plus grande |
+
+### Nombres à virgules
+
+Tout ces types sont signés, le minimum est donc l'opposé du maximum.
+
+| Type | Taille (Bytes) | Maximum | Décimales exactes |
+|:--|:--|:--|:--|
+| float | 4 | 3.4028234664e+38 | 6 |
+| double | 8 | 1.7976931349e+308 | 15 |
+| long double | 16 | 1.1897314954e+4932 | 18 |
+
+**Ces chiffres proviennent d'experiences sur un ordinateur en particulier, ils peuvent différer légerement sur un autre, à voir dans le fichier types_info.c**
 
 Ex:
 ```c
@@ -101,7 +112,7 @@ for (int i = 1; i < n; i++) { // ici, i commence à 1 et non 0 car x est la puis
 
 NB: pour les puissances rationnelles (0.5, 3.1415, ... = n/d) il convient de soit approcher la racine d - ème de la n -ième puissance du nombre par des algorythmes assez complexes soit de passer par une exponentielle. La fonction exp est disponible dans la bibliothèque math.h, sinon on peut l'approcher via le développement en série de Taylor / McLaurin (à savoir 1 + x + x^2/2 + x^/6 + ...).
 
-#### Contitions
+#### Contitionnels
 
 Une condition évalue 0 à la valeur FAUX et n'importe quoi d'autre à VRAI
 
@@ -130,7 +141,7 @@ Ces deux opérateurs sont dit parresseux car s'ils déduisent la réponse du pre
 
 ### Opérateurs sur bits
 
-#### Cconditions
+#### Conditionnels
 
 Ils comparents la forme en bits des valeurs, applicables donc sur tout les types simples.
 
