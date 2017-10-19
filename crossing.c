@@ -12,7 +12,7 @@ int *: "pointer to int", default: "other")
 #include <stdio.h>
 
 int main(int argc, char* argv[]) {
-
+    
     signed char a;
     unsigned char z;
     signed short int e;
