@@ -213,7 +213,7 @@ Les différentes opérations sur un même échelons se lisent de gauche à droit
 11. `&&` `||`
 13. `=` `+=` `-=` `*=` `/=` `%=` `&=` `|=`
 
-<sup>2</sup> : Signe moins unitaire, négation et non pas différence
+> <sup>2</sup> : Signe moins unitaire, négation et non pas différence
 
 ## Flux de contrôles
 
