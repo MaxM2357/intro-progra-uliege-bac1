@@ -59,7 +59,7 @@ signed long int t; // equivalent à signed long
 long double q;
 ```
 
-Toutes  ces déclarations peuvent être préfixée par `const`, la variable devient alors constante, impossible de lui affecter une nouvelle valeur, les opérations telles que const += autre_variable renvoie une erreur de compilations.  
+* Toutes  ces déclarations peuvent être préfixée par `const`, la variable devient alors constante, impossible de lui affecter une nouvelle valeur, les opérations telles que const += autre_variable renvoie une erreur de compilations.  
 Ex:
 
 ```c
@@ -67,13 +67,10 @@ const short int var = 0;
 var++; //renvoie un erreur
 ```
 
-Chacun de ces types primitifs peut être déclaré sous forme de pointeur (un chapitre y est consacré) comme suit: `int* pointeur_sur_int = &normal_int;`
-
-Chacun de ces types primitifs peut être déclaré sous forme de tableau comme suit: `int tableau_de_int[];`
-
-Si vous déclarer un pointeur constant, seule l'adresse enregistrée dans le pointeur est constante, la valeur à cette adresse peut toujours être modifiée.
-
-Pour un int, si le prefice long ou short est utilisé, la mention `int` devient facultative, on peut donc écrire `short var;` au lieux de `short int var;`
+* Pour un int, si le prefice long ou short est utilisé, la mention `int` devient facultative, on peut donc écrire `short var;` au lieux de `short int var;`
+* Chacun de ces types primitifs peut être déclaré sous forme de pointeur (un chapitre y est consacré) comme suit: `int* pointeur_sur_int = &normal_int;`
+* Si vous déclarer un pointeur constant, seule l'adresse enregistrée dans le pointeur est constante, la valeur à cette adresse peut toujours être modifiée.
+* Chacun de ces types primitifs peut être déclaré sous forme de tableau comme suit: `int tableau_de_int[];`
 
 
 ### Opérateurs sur les types primitifs
@@ -81,7 +78,7 @@ Pour un int, si le prefice long ou short est utilisé, la mention `int` devient 
 
 #### Arithmétiques
 
-* `+`, `-`, `*`: implicite
+* `+`, `-`, `*`: *implicite*
 * `/`: sur des entiers (int/char) il renvoie le resultat de la division eucledienne, donc **toujours un entier**.
 * `%`: sur des entiers uniquement, il renvoie le reste de la division eucledienne.
 
@@ -96,7 +93,7 @@ int test1 = numerateur*quotient == numerateur; // vaut 0
 int test1 = numerateur*quotient + reste == numerateur; // vaut 1
 ```
 
-Note: lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
+* Lors d'opérations sur des variables de type char, leur valeur est utilisée en utilisant le nombre associé au caractère utilisé pour la définition grâce à la table ASCII, de plus, le résultat de n'importe quelle opération entre 2 chars est un int et le résultat entre un char et un int est un int.
 
 **RAPPEL: aucun opérateur standard n'existe pour les puissances entières**  
 Pour ce faire il convient de faire une boucle (cf Flux de contrôles/Boucles)
@@ -111,7 +108,7 @@ for (int i = 1; i < n; i++) { // ici, i commence à 1 et non 0 car x est la puis
 // x vaut maintenant la n-ième puissance de la valeur de départ
 ```
 
-NB: pour les puissances rationnelles (0.5, 3.1415, ... = n/d) il convient de soit approcher la racine d - ème de la n -ième puissance du nombre par des algorythmes assez complexes soit de passer par une exponentielle. La fonction exp est disponible dans la bibliothèque math.h, sinon on peut l'approcher via le développement en série de Taylor / McLaurin (à savoir 1 + x + x^2/2 + x^/6 + ...).
+* **Plus compliqué :** pour les puissances rationnelles (0.5, 3.1415, ... = n/d) il convient de soit approcher la racine d - ème de la n - ième puissance du nombre par approximation ou une exponentielle. La fonction exp est disponible dans la bibliothèque math.h.
 
 #### Contitionnels
 
@@ -122,7 +119,7 @@ Une condition évalue 0 à la valeur FAUX et n'importe quoi d'autre à VRAI
 * != (différence)   
 /!\ respecte le type aussi !
 * <, >, <=, >=  
-implicite
+*implicite*
 * && ("et" parresseux)  
 a && b => donne la valeur de a si a == 0 sinon celle de b <sup>1</sup>
 * || ("ou" paresseux)  
@@ -130,15 +127,15 @@ a || b => donne la valeur de a si a != 0 sinon celle de b <sup>1</sup>
 
 > <sup>1</sup> : Il ne donne pas réellement la valeur mais 1 si cette valeur est non nulle, sinon 0.
 
-Ces deux opérateurs sont dit parresseux car s'ils déduisent la réponse du premier, ils n'évaluent pas le deuxième, ex: si on écrit a && b et que a est égal à 0, le compilateur n'ira pas lire b.
+* Ces deux opérateurs sont dit parresseux car s'ils déduisent la réponse du premier, ils n'évaluent pas le deuxième, ex: si on écrit a && b et que a est égal à 0, le compilateur n'ira pas lire b.
 
 
 #### Operateurs raccourcis
-* `x = x + c;` équivalent à `x += c;`
-* `x = x - c;` équivalent à `x -= c;`
-* `x = x / c;` équivalent à `x /= c;`
-* `x = x * c;` équivalent à `x *= c;`
-* `x = x % c;` équivalent à `x %= c;`
+* `x = x + c` équivalent à `x += c`
+* `x = x - c` équivalent à `x -= c`
+* `x = x / c` équivalent à `x /= c`
+* `x = x * c` équivalent à `x *= c`
+* `x = x % c` équivalent à `x %= c`
 
 ### Opérateurs sur bits
 
@@ -147,16 +144,16 @@ Ces deux opérateurs sont dit parresseux car s'ils déduisent la réponse du pre
 Ils comparents la forme en bits des valeurs, applicables donc sur tout les types simples.
 
 * & ("et") revoie 1 si les deux bit sont 1, 0 sinon  
-Ex: 0101 & 0110 = 0110
-* | ("ou") revoie 1 si au moins un des 2 bits est 1  
-Ex: 0101 | 0110 = 0111     
+Ex: `0101 & 0110` = `0110`
+* | ("ou") revoie 1 si au moins un des 2 bits est 1  
+Ex: `0101 | 0110` = `0111`  
 * ^ ("ou" strict) revoie 1 si 1 seul des deux bits est 1  
-Ex: 0101 ^ 0110 = 0011
+Ex: `0101 ^ 0110` = `0011`
 
 #### Operateurs raccourcis
-* `x = x & c;` équivalent à `x &= c;`
-* `x = x | c;` équivalent à `x |= c;`
-* `x = x ^ c;` équivalent à `x ^= c;`
+* `x = x & c` équivalent à `x &= c`
+* `x = x | c` équivalent à `x |= c`
+* `x = x ^ c` équivalent à `x ^= c`
 
 #### Décalages
 
@@ -198,7 +195,7 @@ Illustrations:
 ```
 
 ### Priorité des opérateurs
-Les différentes opérations sur un même échelons se lisent de gauche à droite.
+* Les différentes opérations sur un même échelons se lisent de gauche à droite
 
 1. `()` `[]`
 2. `--` `++` `-`<sup>2</sup>
@@ -216,6 +213,8 @@ Les différentes opérations sur un même échelons se lisent de gauche à droit
 > <sup>2</sup> : Signe moins unitaire, négation et non pas différence
 
 ## Flux de contrôles
+
+* Pour chaque bloc de code d'un flux de contrôle, s'il ne prend qu'une seule ligne les accolades de délimitation ne sont pas nécessaires
 
 ### Conditions
 
@@ -236,7 +235,7 @@ if (cond) {
 Fonctionnement:  
 
 SI cond != 0, code 1 est éxécuté  
-SINON SI cond2 != 0, code 2 est éxécuté  **NB: CECI N'A PAS ETE VU EN COURS**  
+SINON SI cond2 != 0, code 2 est éxécuté  **Non vu en cours mais utile**  
 SINON code 3 est éxécuté
 
 #### Condition ternaire
@@ -247,10 +246,8 @@ int v1, v2, cond;
 int result = ( cond ? v1 : v2 );
 ```
 
-result prend la valeur de v1 si cond != 0, sinon celle de v2.  
-NB:result, v1 et v2 doivent impérativement être du même type.
-
-Pour chaque bloc, s'il ne prend qu'une seule ligne, les {} ne sont pas nécessaires.
+* result prend la valeur de v1 si cond != 0, sinon celle de v2
+* result, v1 et v2 doivent impérativement être du même type
 
 ### Boucles
 
@@ -266,9 +263,8 @@ for (int compteur = 0; cond; compteur++) {
 }
 ```
 
-Aucunes des parties du for (initialisation / condition / incrementation) n'est obligatoire, il en résulte alors une boucle infinie.
-
-Pour chaque bloc, s'il ne prend qu'une seule ligne, les {} ne sont pas nécessaires.
+* Aucunes des parties du for (initialisation / condition / incrementation) n'est obligatoire, il en résulte alors une boucle infinie
+* Les mots-clefs `break` et `continue` n'ont pas été vy en cours mais leur utilisation reste assez intuitive
 
 
 ## Pointeurs
@@ -335,7 +331,7 @@ NB:
 ## Compilation
 
 **Ceci n'est pas inclus dans la matière évaluée, il s'agit uniquement d'une aide pour la compilation des fichiers sources**
-NB: ceci est couvert de façon plus détaillée dans [Le deuxième chapitre du cours sur openclassroom](https://openclassrooms.com/courses/apprenez-a-programmer-en-c/ayez-les-bons-outils)
+NB: ceci est couvert de façon plus détaillée dans [le deuxième chapitre du cours sur openclassroom](https://openclassrooms.com/courses/apprenez-a-programmer-en-c/ayez-les-bons-outils) ou sur [le site du cours](http://www.montefiore.ulg.ac.be/~bdonnet/info2009/documentation.html)
 
 ### Avec IDE
 
