@@ -78,3 +78,51 @@ int main() {
     return 0;
 
 }
+/*
+Résultats :
+
+Nombre de bytes occupé par un :
+char: 1
+short: 2
+int: 4
+long: 8
+long: 8
+float: 4
+double: 8
+long double: 16
+
+Valeur minimale d'un: 
+signed char: -2^7
+signed short int: -2^15
+signed int: -2^31
+signed long: -9223372036854775808
+
+Valeur minimale positive non nulle d'un: 
+float: 1.1754943508e-38
+double: 2.2250738585e-308
+long double: 3.3621031431e-4932
+
+Valeur maximale d'un: 
+signed char: 2^7-1
+unsigned char: 2^8-1
+signed short int: 2^15-1
+unsigned short int: 2^16-1
+signed int: 2^31-1
+unsigned int: 2^32-1
+signed long: 9223372036854775807
+unsigned long: 18446744073709551615
+float: 3.4028234664e+38
+double: 1.7976931349e+308
+long double: 1.1897314954e+4932
+
+Nombre de chiffre dans la mantisse (partie entière) d'un : 
+float: 24
+double: 53
+long double: 64
+
+Nombre de chiffre significatifs d'un : 
+float: 6
+double: 15
+long double: 18
+
+*/
