@@ -18,6 +18,7 @@
 * Instruction : Ordre d'effectuer une action précise pour la machine
 * Bibliothèque : Souvent appelée, à tort, librairie c'est un fichier tierce obtenu qui contient des instructions qui ne sont pas nécessairement connue, bien qu'on puisse les utiliser dans une certaine mesure.
 * Indentation : Pratique utilisée par les développeurs / codeurs qui consiste à faire précéder chaque ligne d'un nombre spécifique d'espace/tabulation afin de donner une meilleure visibilité au code.
+* Invariant de boucle : Propriété sur un ensemble de *variable* d'un programme qui reste "vrai" avant et après chaque itération de la *boucle*. Il peut s'exprimer de manière formelle (par une formulle mathématique), littéralle, graphique, ...
 
 ## Types Primitifs
 
