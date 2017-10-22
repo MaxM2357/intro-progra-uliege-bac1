@@ -66,13 +66,13 @@ Toutes les options ne sont pas nécessairement disponibles.
 | Type | Taille (Bytes) | Signe | Minimum | Maximum | Identifieur commun | Commentaires|
 |:--|:--|:--|:--|:--|:--|--:|
 | char | 1 | signed **par défaut** | -2^7 | 2^7-1 | `%c` | peut être initialisé avec un caractère ASCII entre ' ' ou un entier |
-|||unsigned | 0 | 2^8-1 | `%c` | | |
+| | |unsigned | 0 | 2^8-1 | `%c` | |
 | short int | 2 | singed **par défaut** | -2^15 | 2^15-1 | `%hi` | la partie `int` dans le nom n'est pas obligatoire, utilisé pour les nombres plus petit |
-||| unsigned | 0 | 2^16-1 | `%hu` | | |
+| | | unsigned | 0 | 2^16-1 | `%hu` | |
 | int | 4 | signed **par défaut** | -2^31 | 2^31-1 | `%d` | le plus utilisé pour la gestion d'entier |
-||| unsigned | 0 | 2^32-1 | `%u` | | |
+| | | unsigned | 0 | 2^32-1 | `%u` | |
 | long int | 8 | signed **par défaut** | -2^63 | 2^63-1 | `%ld` |utilisé pour les nombres plus grands |
-||| unsigned | 0 | 2^64-1 | `%lu` | | |
+| | | unsigned | 0 | 2^64-1 | `%lu` | |
 
 ### Nombres à virgules
 
