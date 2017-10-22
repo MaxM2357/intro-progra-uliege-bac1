@@ -1,5 +1,40 @@
 # PROGRAMMATION - SYNTHESE
 
+Table des matières
+=================
+
+   * [Vocabulaire](#vocabulaire)
+   * [Types Primitifs](#types-primitifs)
+      * [Nombres Entiers](#nombres-entiers)
+      * [Nombres à virgules](#nombres-à-virgules)
+      * [Casting](#casting)
+         * [Casting implicite](#casting-implicite)
+         * [Casting explicite](#casting-explicite)
+      * [Opérateurs sur les types primitifs](#opérateurs-sur-les-types-primitifs)
+         * [Arithmétiques](#arithmétiques)
+         * [Contitionnels](#contitionnels)
+         * [Operateurs raccourcis](#operateurs-raccourcis)
+      * [Opérateurs sur bits](#opérateurs-sur-bits)
+         * [Conditionnels](#conditionnels)
+         * [Operateurs raccourcis](#operateurs-raccourcis-1)
+         * [Décalages](#décalages)
+      * [Priorité des opérateurs](#priorité-des-opérateurs)
+   * [Flux de contrôles](#flux-de-contrôles)
+      * [Conditions](#conditions)
+         * [Principe de base](#principe-de-base)
+         * [Condition ternaire](#condition-ternaire)
+      * [Boucles](#boucles)
+   * [Pointeurs](#pointeurs)
+   * [Tableaux](#tableaux)
+      * [Tableaux unidimensionnels](#tableaux-unidimensionnels)
+   * [Entrée et sortie (I/O)](#entrée-et-sortie-io)
+      * [Printf](#printf)
+      * [Scanf](#scanf)
+      * [Formatage](#formatage)
+   * [Compilation](#compilation)
+      * [Avec IDE](#avec-ide)
+      * [Sans IDE](#sans-ide)
+
 ## Vocabulaire
 
 * **Compilation** : Le *compilateur* transforme un fichier `.c` en un fichier binaire par le biais de la compilation. C'est donc l'action de transormer un *code source* lisible et compréhensible humainnement en un fichier composé de 1 et 0 destiné à l'ordinateur.
