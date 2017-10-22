@@ -123,17 +123,17 @@ Le changement du type se fera naturellement si besoin.
 * Lors de l'assignation, le type attendu est respecté
 
 Ex: `int a = 2; float b = 3.4; long double c = 2.71;` `a*b` sera `float` et `a*c` sera un `long double`
-Ex: 
+Ex:
 ```c
-long double float_pi = 3.1415926535897931;
-int int_pi = float_pi; // int_pi vaut 3 et est de type entier, comme attendu
+long double ld_pi = 3.1415926535897931;
+int int_pi = ld_pi; // int_pi vaut 3 et est de type entier, comme attendu
 ```
 
 #### Casting explicite
 
 * Il suffit de placer entre paranthèses le type dans lequel on souhaite convertir une variable
 
-Ex: 
+Ex:
 ```c
 int a = 7, b = 10;
 printf("%d", a / b); // affiche 0
@@ -213,7 +213,7 @@ Ils comparents la forme en bits des valeurs, applicables donc sur tout les types
 * & ("et") revoie 1 si les deux bit sont 1, 0 sinon  
 Ex: `0101 & 0110` = `0110`
 * | ("ou") revoie 1 si au moins un des 2 bits est 1  
-Ex: `0101 | 0110` = `0111`  
+Ex: `0101 | 0110` = `0111` 
 * ^ ("ou" strict) revoie 1 si 1 seul des deux bits est 1  
 Ex: `0101 ^ 0110` = `0011`
 
@@ -360,7 +360,7 @@ On les déclare de cette manière : `type_du_tableau nom_du_tableau[taille_du_ta
 On peut accéder aux éléments avec l'indice grâce à ce format = `nom_du_tableau[indice]`, on peut y assigner une valeur pour vu que le tableau ne soit pas déclaré constant ou obtenir la valeur qui y était précédemment.
 On peut leur assimiler une valeur par défaut, ex : `int valeurs_booleene[2] = {-1, 1};` où `valeurs_booleene[0]` est 1 et `valeurs_booleene[1]` est -1. Un tableau constant doit donc obligatoirement avoir une valeur par défaut.
 
-Ex d'utilisation : 
+Ex d'utilisation :
 ```c
 const unsigned short taille = 4;
 int elements[taille];
@@ -401,26 +401,26 @@ NB: bien penser à *référencer* ses variables lorsqu'on les passe dans scanf p
 | **`%c`** |  Charactère |  `char`, `unsigned  char` |
 | **`%d`** |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` |
 | `%e`, `%E` |  Notation scientifique des nombres à virgule |  `float`, `double ` |
-| **`%f`** |  Nombre à virgule |  `float` | 
+| **`%f`** |  Nombre à virgule |  `float` |
 | `%g`, `%G` |  Pareil que %e ou %E |  `float`, `double ` |
 | **`%hi`** |  Entier signé (petit) |  `short` |
 | **`%hu`** |  Entier non signé (petit) |  `unsigned short` |
 | `%i` |  Entier signé |  `short`, `unsigned  short`, `int `, `long ` |
 | **`%ld`**, `%l`, `%li` |  Entier signé |  `long` |
-| **`%lf`** |  Nombre à virgule |  `double` | 
-| **`%Lf`** |  Nombre à virgule |  `long double` | 
-| **`%lu`** |  Entier non signé |  `unsigned int`, `unsigned  long` | 
-| `%lli`, `%lld` |  Entier signé |  `long long` | 
+| **`%lf`** |  Nombre à virgule |  `double` |
+| **`%Lf`** |  Nombre à virgule |  `long double` |
+| **`%lu`** |  Entier non signé |  `unsigned int`, `unsigned  long` |
+| `%lli`, `%lld` |  Entier signé |  `long long` |
 | `%llu` |  Entier non signé |  `unsigned long long` |
 | `%o` |  Représentation octale d'un entier |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` |
 | `%p` |  Adresse d'un pointeur sur `void` |  `void *` |
-| `%s` |  Caractères (texte entre "") |  `char *` | 
+| `%s` |  Caractères (texte entre "") |  `char *` |
 | **`%u`** |  Entier non signé |  `unsigned int`, `unsigned  long` |
 | `%x`, `%X` |  Représentation octale d'un entier non signé |  `short`, `unsigned  short`, `int `, `unsigned  int`, `long ` |
 | `%n` |  N'affiche rien | N/A |
 | **`%%`** |  Affiche % | N/A |
 
-NB: 
+NB:
 * Utiliser `%d` pour l'affichage d'un float/double revient à afficher uniquement sa partie entière.
 * Utiliser une syntaxe de type `%Nd` (N à remplacer explicitement) affiche un entier avec au moins N chiffres (en remplaçant par des espaces à l'avant si besoin)
 * Utiliser une syntaxe de type `%.Nd` (N à remplacer explicitement) affiche un flottant avec ses décimales arrondies à la N-ième (si besoin) (fonctionne aussi pour les double et long double)
@@ -434,7 +434,7 @@ NB: ceci est couvert de façon plus détaillée dans [le deuxième chapitre du c
 
 *IDE* : *Integrated Development Environment* Ou Environnement de Développement Inégré est un logiciel permettant de combiner les divers logiciels utilisés pour la réalisation d'un projet, nottement un *editeur*, un *compilateur* et un *débugger*. On écrit le code dans l'éditeur, on le compile par une action simple et le débugger nous aide à tester le projet.
 
-Les plus connus: 
+Les plus connus:
 
 * Multiplatforme : Code::Blocks
 * Windows/Mac OS : Visual Studio
