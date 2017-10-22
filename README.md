@@ -1,5 +1,7 @@
 # intro-progra-uliege-bac1
 
+[**ACCES DIRECT A LA SYNTHESE**](https://github.com/maxime915/intro-progra-uliege-bac1/blob/master/synthese.md)
+
 Voici les résumés et autres infos sur la matière du cours donné par B. Donnet à l'Uliege. Tout est complété par l'expérience personnelle mais aussi le cours [Apprenez à programmer en c!](https://openclassrooms.com/courses/apprenez-a-programmer-en-c) sur openclassroom, soyez libre de suggerer des modifications (erreurs, ajouts, clarifications...) le but est de tous nous aider et d'aider ceux qui passerons après nous.
 
 * Le contenu principal utile au cours est dans le fichier synthese.md
