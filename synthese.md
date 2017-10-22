@@ -84,7 +84,7 @@ Tout ces types sont signés, le minimum est donc l'opposé du maximum. Cependant
 | double | 8 | 1.7976931349e+308 | 15 | `%lf` |
 | long double | 16 | 1.1897314954e+4932 | 18 | `%Lf` |
 
-NB: plus d'informations sur les identifieurs peuvent êtres trouvées dans la section *entrée et sortie*
+NB: plus d'informations sur les identifieurs peuvent êtres trouvées dans la section [entrée et sortie](#formatage)
 **Ces chiffres proviennent d'experiences sur un ordinateur en particulier, ils peuvent différer légerement sur un autre, à voir dans le fichier types_info.c**
 
 Ex:
