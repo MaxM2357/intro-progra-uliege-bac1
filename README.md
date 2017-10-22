@@ -26,21 +26,16 @@ int main(int argc, char* argv[]) {
     double p;
     long double q;
 """
-
     last_part="""
     return 0;
 }
 """
-
     l=list("azertyuiopq")
     operator=['+', '-', '*', '/']
-
     print(first_part)
-
     for o in operator:
       for i in l:
         for j in l:
-          print("    printf(\"%s {0} %s is %s\\n\", typename({1}), typename({2}), typename({1} {0} {2}));".format(o, i, j))
-
+          print("\tprintf(\"%s {0} %s is %s\\n\", typename({1}), typename({2}), typename({1} {0} {2}));".format(o, i, j))
     print(last_part)
 ```
